@@ -57,7 +57,6 @@ final class UnnaturalScrollViewController: UIViewController {
                 let newValue = change.newValue,
                 newValue != self.scrollView.contentSize
                 else { return }
-            print("observation, web content size:", newValue)
             self.updateScrollViewToMatchTableView()
         }
     }
