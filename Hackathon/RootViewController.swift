@@ -15,7 +15,7 @@ class RootViewController: UIViewController {
 
     private let dataSource = ListDataSource(sections: [
         Section(items: [
-            Item(title: "Scrolling", vcClass: UIViewController.self),
+            Item(title: "Scrolling", vcClass: UnnaturalScrollViewController.self),
             ]),
         ]
     )
@@ -61,6 +61,7 @@ extension RootViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let item = dataSource[indexPath]
         let instance = item.vcClass.init()
+        instance.title = item.title
         navigationController?.pushViewController(instance, animated: true)
     }
 
