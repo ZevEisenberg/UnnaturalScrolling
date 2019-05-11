@@ -46,7 +46,7 @@ class RootViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
-        let debugging = true
+        let debugging = false
         if debugging {
             selected(item: dataSource[0]
                 .items
@@ -95,7 +95,6 @@ private extension RootViewController {
 
     func selected(item: Item) {
         let instance = item.vcClass.init()
-        instance.title = item.title
         navigationController?.pushViewController(instance, animated: true)
     }
 

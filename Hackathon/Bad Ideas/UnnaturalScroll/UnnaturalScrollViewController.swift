@@ -9,56 +9,84 @@
 import Anchorage
 import Swiftilities
 import UIKit
-import WebKit
 
 final class UnnaturalScrollViewController: UIViewController {
 
-    let webView = WKWebView(frame: .zero)
-    let scrollView = UIScrollView()
+    private let tableView = UITableView()
+    private let scrollView = UIScrollView()
+
+    private let dataSource = ListDataSource(sections: [
+        Section(items: Constants.titles
+            .enumerated()
+            .map { offset, title in Item(title: title, assetName: "PastHacks/\(offset)") }
+        ),
+        ]
+    )
+
+    private var observation: NSKeyValueObservation?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         navigationItem.largeTitleDisplayMode = .never
+        title = "2018 Stupid Hacks"
 
         // View Hierarchy
-        view.addSubview(webView)
+        view.addSubview(tableView)
         view.addSubview(scrollView)
 
         // Layout
-        webView.edgeAnchors == view.edgeAnchors
+        tableView.edgeAnchors == view.edgeAnchors
         scrollView.edgeAnchors == view.edgeAnchors
 
         // Setup
         scrollView.delegate = self
-        webView.navigationDelegate = self
-        let request = URLRequest(url: Constants.url)
-        webView.load(request)
+        tableView.dataSource = self
+        tableView.allowsSelection = false
+        tableView.separatorStyle = .none
+        tableView.register(ImageCell.self, forCellReuseIdentifier: "cell")
+        tableView.showsVerticalScrollIndicator = false
+        scrollView.showsVerticalScrollIndicator = false
+
+        tableView.contentInsetAdjustmentBehavior = .automatic
+        scrollView.contentInsetAdjustmentBehavior = .never
+
+        observation = tableView.observe(\.contentSize, options: [.new, .initial]) { [weak self] _, change in
+            guard let self = self else { return }
+            guard
+                let newValue = change.newValue,
+                newValue != self.scrollView.contentSize
+                else { return }
+            print("observation, web content size:", newValue)
+            self.updateScrollViewToMatchTableView()
+        }
+    }
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        let newInsets = UIEdgeInsets(
+            top: tableView.safeAreaInsets.bottom,
+            left: tableView.safeAreaInsets.right,
+            bottom: tableView.safeAreaInsets.top,
+            right: tableView.safeAreaInsets.left
+        )
+        scrollView.contentInset = newInsets
     }
 
 }
 
-extension UnnaturalScrollViewController: WKNavigationDelegate {
+extension UnnaturalScrollViewController: UITableViewDataSource {
 
-    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
-        if navigationAction.request.url?.absoluteString.contains(Constants.recognizablePartOfURL) ?? false {
-            decisionHandler(.allow)
-        }
-        else {
-            decisionHandler(.cancel)
-        }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return dataSource[section].count
     }
 
-    // via https://stackoverflow.com/a/45674575/255489
-    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        webView.evaluateJavaScript("document.body.scrollHeight", completionHandler: { [weak self] (height, heightError) in
-            if let height = height as? CGFloat {
-                self?.webViewHeightChanged(to: height)
-            }
-            else {
-                print("Error getting web view height: \(heightError?.localizedDescription ?? "unknown height error")")
-            }
-        })
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let item = dataSource[indexPath]
+        let image = UIImage(named: item.assetName)!
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ImageCell
+        cell.update(withImage: image, title: item.title)
+        return cell
     }
 
 }
@@ -66,13 +94,15 @@ extension UnnaturalScrollViewController: WKNavigationDelegate {
 extension UnnaturalScrollViewController: UIScrollViewDelegate {
 
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let distanceToScroll = 0...(webView.scrollView.contentSize.height - webView.frame.height)
+        let maxScrollValue = tableView.contentSize.height - tableView.frame.height
+        guard maxScrollValue > 0 else { return }
+        let distanceToScroll = 0...(maxScrollValue)
         let newOffset = scrollView.contentOffset.y.scaled(
             from: distanceToScroll,
             to: distanceToScroll,
             reversed: true
         )
-        webView.scrollView.contentOffset.y = newOffset
+        tableView.contentOffset.y = newOffset
     }
 
 }
@@ -80,13 +110,40 @@ extension UnnaturalScrollViewController: UIScrollViewDelegate {
 private extension UnnaturalScrollViewController {
 
     enum Constants {
-        static let recognizablePartOfURL = "how-to-change-scrolling-direction-on-mac-2260835"
-        static let url = URL(string: "https://www.lifewire.com/\(recognizablePartOfURL)")!
+//        static let url = URL(string: "https://www.lifewire.com/\(recognizablePartOfURL)")!
+        static let url = URL(string: "https://zeveisenberg.com")!
+
+        static let titles = [
+            "Swarm of Babies",
+            "BEEPASS",
+            "Infinite Cha-cha slide / WebMG",
+            "Ad Plus",
+            "2D Anime Dating",
+            "Fart Detector",
+            "Life Aware",
+            "Useless Button",
+            "Twitter Firehose",
+            "Civilized Hamster dining set",
+            "Death Counter",
+            "Tuned a fish",
+        ]
     }
 
-    func webViewHeightChanged(to newHeight: CGFloat) {
-        scrollView.contentSize = CGSize(width: scrollView.frame.width, height: newHeight)
-        scrollView.contentOffset.y = newHeight - scrollView.bounds.height
+    struct Item {
+        let title: String
+        let assetName: String
+    }
+
+    struct Section: ListSection {
+        var items: [Item]
+    }
+
+    func updateScrollViewToMatchTableView() {
+        scrollView.contentSize = tableView.contentSize
+        let newOffset = tableView.contentSize.height
+            - scrollView.bounds.height
+            - tableView.contentOffset.y
+        scrollView.contentOffset.y = newOffset
     }
 
 }
