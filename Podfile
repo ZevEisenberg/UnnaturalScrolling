@@ -5,5 +5,7 @@ target 'Hackathon' do
 
   pod 'Anchorage'
   pod 'BonMot', :git => 'https://github.com/Rightpoint/BonMot.git', :branch => 'swift-5'
+  pod 'Swiftilities/Deselection'
+  pod 'Swiftilities/Math'
 
 end
