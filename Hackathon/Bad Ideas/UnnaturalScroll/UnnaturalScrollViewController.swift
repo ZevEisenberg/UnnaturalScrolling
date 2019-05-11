@@ -45,8 +45,11 @@ final class UnnaturalScrollViewController: UIViewController {
         tableView.allowsSelection = false
         tableView.separatorStyle = .none
         tableView.register(ImageCell.self, forCellReuseIdentifier: "cell")
+
         tableView.showsVerticalScrollIndicator = false
         scrollView.showsVerticalScrollIndicator = false
+        tableView.showsHorizontalScrollIndicator = false
+        scrollView.showsHorizontalScrollIndicator = false
 
         tableView.contentInsetAdjustmentBehavior = .automatic
         scrollView.contentInsetAdjustmentBehavior = .never
