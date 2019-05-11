@@ -66,9 +66,12 @@ extension UnnaturalScrollViewController: WKNavigationDelegate {
 extension UnnaturalScrollViewController: UIScrollViewDelegate {
 
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let range = 0...(webView.scrollView.contentSize.height - webView.frame.height)
-        let newOffset = scrollView.contentOffset.y.scaled(from: range, to:  range, reversed: true)
-//        print(newOffset)
+        let distanceToScroll = 0...(webView.scrollView.contentSize.height - webView.frame.height)
+        let newOffset = scrollView.contentOffset.y.scaled(
+            from: distanceToScroll,
+            to: distanceToScroll,
+            reversed: true
+        )
         webView.scrollView.contentOffset.y = newOffset
     }
 
