@@ -86,7 +86,7 @@
 		5B0E068D2287231D00CB2977 /* Bad Ideas */ = {
 			isa = PBXGroup;
 			children = (
-				5B0E068F2287233C00CB2977 /* UnnaturalScrollViewController.swift */,
+				5B0E069122872D1500CB2977 /* UnnaturalScroll */,
 			);
 			path = "Bad Ideas";
 			sourceTree = "<group>";
@@ -97,6 +97,14 @@
 				5B0E068B2287206300CB2977 /* DataSource.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		5B0E069122872D1500CB2977 /* UnnaturalScroll */ = {
+			isa = PBXGroup;
+			children = (
+				5B0E068F2287233C00CB2977 /* UnnaturalScrollViewController.swift */,
+			);
+			path = UnnaturalScroll;
 			sourceTree = "<group>";
 		};
 		681BBDDCB8FBF17EF5FFA52E /* Frameworks */ = {
@@ -141,6 +149,7 @@
 				TargetAttributes = {
 					5B0E067522871D5600CB2977 = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -372,6 +381,7 @@
 			baseConfigurationReference = 5342AA0D896E0BAE970B8C01 /* Pods-Hackathon.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2KJHM26Y46;
 				INFOPLIST_FILE = Hackathon/Info.plist;
@@ -381,6 +391,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zeveisenberg.Hackathon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -391,6 +402,7 @@
 			baseConfigurationReference = FC8B4656D1F938FFCB0090C2 /* Pods-Hackathon.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2KJHM26Y46;
 				INFOPLIST_FILE = Hackathon/Info.plist;

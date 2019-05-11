@@ -38,6 +38,18 @@ class RootViewController: UIViewController {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        let debugging = true
+        if debugging {
+            selected(item: dataSource[0]
+                .items
+                .first { $0.vcClass == UnnaturalScrollViewController.self }!
+            )
+        }
+    }
+
 }
 
 extension RootViewController: UITableViewDataSource {
@@ -60,9 +72,7 @@ extension RootViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let item = dataSource[indexPath]
-        let instance = item.vcClass.init()
-        instance.title = item.title
-        navigationController?.pushViewController(instance, animated: true)
+        selected(item: item)
     }
 
 }
@@ -76,6 +86,12 @@ private extension RootViewController {
 
     struct Section: ListSection {
         var items: [Item]
+    }
+
+    func selected(item: Item) {
+        let instance = item.vcClass.init()
+        instance.title = item.title
+        navigationController?.pushViewController(instance, animated: true)
     }
 
 }
