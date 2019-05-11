@@ -110,9 +110,6 @@ extension UnnaturalScrollViewController: UIScrollViewDelegate {
 private extension UnnaturalScrollViewController {
 
     enum Constants {
-//        static let url = URL(string: "https://www.lifewire.com/\(recognizablePartOfURL)")!
-        static let url = URL(string: "https://zeveisenberg.com")!
-
         static let titles = [
             "Swarm of Babies",
             "BEEPASS",
