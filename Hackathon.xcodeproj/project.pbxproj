@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,11 +15,11 @@
 		5B0E06902287233C00CB2977 /* UnnaturalScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0E068F2287233C00CB2977 /* UnnaturalScrollViewController.swift */; };
 		5B0E069C22875C1600CB2977 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0E069B22875C1600CB2977 /* ImageCell.swift */; };
 		5B0E069E2287601500CB2977 /* With.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0E069D2287601500CB2977 /* With.swift */; };
-		9E48584C07BC1908D7479C49 /* Pods_Hackathon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A644388F9D84314D743E4CC9 /* Pods_Hackathon.framework */; };
+		7A98EA5D2B2A9F31001F6CD5 /* Anchorage in Frameworks */ = {isa = PBXBuildFile; productRef = 7A98EA5C2B2A9F31001F6CD5 /* Anchorage */; };
+		7A98EA602B2A9F70001F6CD5 /* Swiftilities in Frameworks */ = {isa = PBXBuildFile; productRef = 7A98EA5F2B2A9F70001F6CD5 /* Swiftilities */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5342AA0D896E0BAE970B8C01 /* Pods-Hackathon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackathon.debug.xcconfig"; path = "Target Support Files/Pods-Hackathon/Pods-Hackathon.debug.xcconfig"; sourceTree = "<group>"; };
 		5B0E067622871D5600CB2977 /* Hackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hackathon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B0E067922871D5600CB2977 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B0E067B22871D5600CB2977 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -30,8 +30,6 @@
 		5B0E068F2287233C00CB2977 /* UnnaturalScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnnaturalScrollViewController.swift; sourceTree = "<group>"; };
 		5B0E069B22875C1600CB2977 /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		5B0E069D2287601500CB2977 /* With.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = With.swift; sourceTree = "<group>"; };
-		A644388F9D84314D743E4CC9 /* Pods_Hackathon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hackathon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FC8B4656D1F938FFCB0090C2 /* Pods-Hackathon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackathon.release.xcconfig"; path = "Target Support Files/Pods-Hackathon/Pods-Hackathon.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,29 +37,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E48584C07BC1908D7479C49 /* Pods_Hackathon.framework in Frameworks */,
+				7A98EA602B2A9F70001F6CD5 /* Swiftilities in Frameworks */,
+				7A98EA5D2B2A9F31001F6CD5 /* Anchorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		34273265FC2D2873F3DFF5A1 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				5342AA0D896E0BAE970B8C01 /* Pods-Hackathon.debug.xcconfig */,
-				FC8B4656D1F938FFCB0090C2 /* Pods-Hackathon.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		5B0E066D22871D5600CB2977 = {
 			isa = PBXGroup;
 			children = (
 				5B0E067822871D5600CB2977 /* Hackathon */,
 				5B0E067722871D5600CB2977 /* Products */,
-				34273265FC2D2873F3DFF5A1 /* Pods */,
-				681BBDDCB8FBF17EF5FFA52E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -113,14 +101,6 @@
 			path = UnnaturalScroll;
 			sourceTree = "<group>";
 		};
-		681BBDDCB8FBF17EF5FFA52E /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				A644388F9D84314D743E4CC9 /* Pods_Hackathon.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -128,17 +108,19 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5B0E068822871D5700CB2977 /* Build configuration list for PBXNativeTarget "Hackathon" */;
 			buildPhases = (
-				6A467122A6AC8BB297047444 /* [CP] Check Pods Manifest.lock */,
 				5B0E067222871D5600CB2977 /* Sources */,
 				5B0E067322871D5600CB2977 /* Frameworks */,
 				5B0E067422871D5600CB2977 /* Resources */,
-				F1126643BF57EB619F34814E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Hackathon;
+			packageProductDependencies = (
+				7A98EA5C2B2A9F31001F6CD5 /* Anchorage */,
+				7A98EA5F2B2A9F70001F6CD5 /* Swiftilities */,
+			);
 			productName = Hackathon;
 			productReference = 5B0E067622871D5600CB2977 /* Hackathon.app */;
 			productType = "com.apple.product-type.application";
@@ -168,6 +150,10 @@
 				Base,
 			);
 			mainGroup = 5B0E066D22871D5600CB2977;
+			packageReferences = (
+				7A98EA5B2B2A9F31001F6CD5 /* XCRemoteSwiftPackageReference "Anchorage" */,
+				7A98EA5E2B2A9F70001F6CD5 /* XCRemoteSwiftPackageReference "Swiftilities" */,
+			);
 			productRefGroup = 5B0E067722871D5600CB2977 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -188,57 +174,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		6A467122A6AC8BB297047444 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Hackathon-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F1126643BF57EB619F34814E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Hackathon/Pods-Hackathon-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Anchorage/Anchorage.framework",
-				"${BUILT_PRODUCTS_DIR}/BonMot/BonMot.framework",
-				"${BUILT_PRODUCTS_DIR}/Swiftilities/Swiftilities.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Anchorage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BonMot.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swiftilities.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Hackathon/Pods-Hackathon-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5B0E067222871D5600CB2977 /* Sources */ = {
@@ -386,7 +321,6 @@
 		};
 		5B0E068922871D5700CB2977 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5342AA0D896E0BAE970B8C01 /* Pods-Hackathon.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -407,7 +341,6 @@
 		};
 		5B0E068A22871D5700CB2977 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FC8B4656D1F938FFCB0090C2 /* Pods-Hackathon.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -447,6 +380,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7A98EA5B2B2A9F31001F6CD5 /* XCRemoteSwiftPackageReference "Anchorage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Rightpoint/Anchorage.git";
+			requirement = {
+				kind = exactVersion;
+				version = 4.5.0;
+			};
+		};
+		7A98EA5E2B2A9F70001F6CD5 /* XCRemoteSwiftPackageReference "Swiftilities" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Rightpoint/Swiftilities";
+			requirement = {
+				kind = exactVersion;
+				version = 0.26.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7A98EA5C2B2A9F31001F6CD5 /* Anchorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7A98EA5B2B2A9F31001F6CD5 /* XCRemoteSwiftPackageReference "Anchorage" */;
+			productName = Anchorage;
+		};
+		7A98EA5F2B2A9F70001F6CD5 /* Swiftilities */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7A98EA5E2B2A9F70001F6CD5 /* XCRemoteSwiftPackageReference "Swiftilities" */;
+			productName = Swiftilities;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5B0E066E22871D5600CB2977 /* Project object */;
 }
