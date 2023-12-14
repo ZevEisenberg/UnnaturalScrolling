@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "5B0E067522871D5600CB2977"
-               BuildableName = "Hackathon.app"
-               BlueprintName = "Hackathon"
-               ReferencedContainer = "container:Hackathon.xcodeproj">
+               BuildableName = "UnnaturalScrolling.app"
+               BlueprintName = "UnnaturalScrolling"
+               ReferencedContainer = "container:UnnaturalScrolling.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -31,9 +31,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5B0E067522871D5600CB2977"
-            BuildableName = "Hackathon.app"
-            BlueprintName = "Hackathon"
-            ReferencedContainer = "container:Hackathon.xcodeproj">
+            BuildableName = "UnnaturalScrolling.app"
+            BlueprintName = "UnnaturalScrolling"
+            ReferencedContainer = "container:UnnaturalScrolling.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <Testables>
@@ -54,9 +54,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5B0E067522871D5600CB2977"
-            BuildableName = "Hackathon.app"
-            BlueprintName = "Hackathon"
-            ReferencedContainer = "container:Hackathon.xcodeproj">
+            BuildableName = "UnnaturalScrolling.app"
+            BlueprintName = "UnnaturalScrolling"
+            ReferencedContainer = "container:UnnaturalScrolling.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -71,9 +71,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5B0E067522871D5600CB2977"
-            BuildableName = "Hackathon.app"
-            BlueprintName = "Hackathon"
-            ReferencedContainer = "container:Hackathon.xcodeproj">
+            BuildableName = "UnnaturalScrolling.app"
+            BlueprintName = "UnnaturalScrolling"
+            ReferencedContainer = "container:UnnaturalScrolling.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

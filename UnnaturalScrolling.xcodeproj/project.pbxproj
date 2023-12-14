@@ -20,7 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5B0E067622871D5600CB2977 /* Hackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hackathon.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B0E067622871D5600CB2977 /* UnnaturalScrolling.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnnaturalScrolling.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B0E067922871D5600CB2977 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B0E067B22871D5600CB2977 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		5B0E068022871D5700CB2977 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -48,7 +48,7 @@
 		5B0E066D22871D5600CB2977 = {
 			isa = PBXGroup;
 			children = (
-				5B0E067822871D5600CB2977 /* Hackathon */,
+				5B0E067822871D5600CB2977 /* UnnaturalScrolling */,
 				5B0E067722871D5600CB2977 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,12 +56,12 @@
 		5B0E067722871D5600CB2977 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5B0E067622871D5600CB2977 /* Hackathon.app */,
+				5B0E067622871D5600CB2977 /* UnnaturalScrolling.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5B0E067822871D5600CB2977 /* Hackathon */ = {
+		5B0E067822871D5600CB2977 /* UnnaturalScrolling */ = {
 			isa = PBXGroup;
 			children = (
 				5B0E067922871D5600CB2977 /* AppDelegate.swift */,
@@ -72,7 +72,7 @@
 				5B0E068222871D5700CB2977 /* LaunchScreen.storyboard */,
 				5B0E068522871D5700CB2977 /* Info.plist */,
 			);
-			path = Hackathon;
+			path = UnnaturalScrolling;
 			sourceTree = "<group>";
 		};
 		5B0E068D2287231D00CB2977 /* Bad Ideas */ = {
@@ -104,9 +104,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5B0E067522871D5600CB2977 /* Hackathon */ = {
+		5B0E067522871D5600CB2977 /* UnnaturalScrolling */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5B0E068822871D5700CB2977 /* Build configuration list for PBXNativeTarget "Hackathon" */;
+			buildConfigurationList = 5B0E068822871D5700CB2977 /* Build configuration list for PBXNativeTarget "UnnaturalScrolling" */;
 			buildPhases = (
 				5B0E067222871D5600CB2977 /* Sources */,
 				5B0E067322871D5600CB2977 /* Frameworks */,
@@ -116,13 +116,13 @@
 			);
 			dependencies = (
 			);
-			name = Hackathon;
+			name = UnnaturalScrolling;
 			packageProductDependencies = (
 				7A98EA5C2B2A9F31001F6CD5 /* Anchorage */,
 				7A98EA5F2B2A9F70001F6CD5 /* Swiftilities */,
 			);
-			productName = Hackathon;
-			productReference = 5B0E067622871D5600CB2977 /* Hackathon.app */;
+			productName = UnnaturalScrolling;
+			productReference = 5B0E067622871D5600CB2977 /* UnnaturalScrolling.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -142,7 +142,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 5B0E067122871D5600CB2977 /* Build configuration list for PBXProject "Hackathon" */;
+			buildConfigurationList = 5B0E067122871D5600CB2977 /* Build configuration list for PBXProject "UnnaturalScrolling" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -159,7 +159,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5B0E067522871D5600CB2977 /* Hackathon */,
+				5B0E067522871D5600CB2977 /* UnnaturalScrolling */,
 			);
 		};
 /* End PBXProject section */
@@ -331,12 +331,12 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2KJHM26Y46;
-				INFOPLIST_FILE = Hackathon/Info.plist;
+				INFOPLIST_FILE = UnnaturalScrolling/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.zeveisenberg.Hackathon;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zeveisenberg.UnnaturalScrolling;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -351,12 +351,12 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2KJHM26Y46;
-				INFOPLIST_FILE = Hackathon/Info.plist;
+				INFOPLIST_FILE = UnnaturalScrolling/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.zeveisenberg.Hackathon;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zeveisenberg.UnnaturalScrolling;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -366,7 +366,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5B0E067122871D5600CB2977 /* Build configuration list for PBXProject "Hackathon" */ = {
+		5B0E067122871D5600CB2977 /* Build configuration list for PBXProject "UnnaturalScrolling" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5B0E068622871D5700CB2977 /* Debug */,
@@ -375,7 +375,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5B0E068822871D5700CB2977 /* Build configuration list for PBXNativeTarget "Hackathon" */ = {
+		5B0E068822871D5700CB2977 /* Build configuration list for PBXNativeTarget "UnnaturalScrolling" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5B0E068922871D5700CB2977 /* Debug */,
